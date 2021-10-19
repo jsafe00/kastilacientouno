@@ -137,6 +137,7 @@ window.onload = function() {
         def.className = "score";
       }
 
+      countPairs();
       selectedTerm = null;
       selectedDef = null;
       term.removeAttribute("data-selected");
@@ -170,12 +171,27 @@ window.onload = function() {
         term.className = "score";
         def.className = "score";
       }
+      
+      countPairs();
       selectedTerm = null; 
       selectedDef = null; 
       term.removeAttribute("data-selected");
       def.removeAttribute("data-selected");
     }
   })
+
+  document.getElementsByClassName('set-3')[0].style.visibility = 'hidden';
+
+  function countPairs() {
+    var tryterms = termsContainer.querySelectorAll("li");
+    for (var i = 0; i < tryterms.length; i++) {
+        saf = document.getElementsByClassName("score").length;
+        console.log(saf);
+        if(saf == 20) {
+          document.getElementsByClassName('set-3')[0].style.visibility = 'visible';
+        }
+     }
+  }
 
   function reset() {
     var resetTerms = termsContainer.querySelectorAll("li");

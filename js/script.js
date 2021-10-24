@@ -5,67 +5,127 @@ window.onload = function() {
   var data = {
     terms: [{
         index: 0,
-        text: "poder"
+        text: "monto"
       }, {
         index: 1,
-        text: "acerca de"
+        text: "pagaré"
       }, {
         index: 2,
-        text: "encima"
+        text: "plazo"
       }, {
         index: 3,
-        text: "extranjero"
+        text: "tasa"
       }, {
         index: 4,
-        text: "ausencia"
+        text: "IVA"
       }, {
         index: 5,
-        text: "realizar"
+        text: "tarjeta"
       }, {
         index: 6,
-        text: "conforme"
+        text: "emision"
       }, {
         index: 7,
-        text: "lograr"
+        text: "desembolso" 
       }, {
         index: 8,
-        text: "logro"
+        text: "bancaria"
       }, {
         index: 9,
-        text: "reconocer"
+        text: "adeudado"
+      }, {
+        index: 10,
+        text: "deudas" 
+      }, {
+        index: 11,
+        text: "meses"
+      }, {
+        index: 12,
+        text: "préstamo"
+      }, {
+        index: 13,
+        text: "usuario"
+      }, {
+        index: 14,
+        text: "llmadas" 
+      }, {
+        index: 15,
+        text: "cambiar"
+      }, {
+        index: 16,
+        text: "descargar"
+      }, {
+        index: 17,
+        text: "crear" 
+      }, {
+        index: 18,
+        text: "rechazadas"
+      }, {
+        index: 19,
+        text: "ofertas"
       }, 
 
     ],
     definitions: [{
         index: 0,
-        text: "able"
+        text: "amount"
       }, {
         index: 1,
-        text: "about"
+        text: "I will pay"
       }, {
         index: 2,
-        text: "above"
+        text: "term"
       }, {
         index: 3,
-        text: "abroad"
+        text: "rate"
       }, {
         index: 4,
-        text: "absence"
+        text: "VAT"
       }, {
         index: 5,
-        text: "accomplish"
+        text: "card"
       }, {
         index: 6,
-        text: "according"
+        text: "issue"
       }, {
         index: 7,
-        text: "achieve"
+        text: "disbursement"
       }, {
         index: 8,
-        text: "achievement"
+        text: "bank"
       }, {
         index: 9,
-        text: "acknowledge"
+        text: "owned"
+      }, {
+        index: 10,
+        text: "debts"
+      }, {
+        index: 11,
+        text: "months"
+      }, {
+        index: 12,
+        text: "loan"
+      }, {
+        index: 13,
+        text: "username"
+      }, {
+        index: 14,
+        text: "call"
+      }, {
+        index: 15,
+        text: "change"
+      }, {
+        index: 16,
+        text: "to download"
+      }, {
+        index: 17,
+        text: "create"
+      }, {
+        index: 18,
+        text: "rejected"
+      }, {
+        index: 19,
+        text: "offers"
       }, 
 
     ],
@@ -82,6 +142,15 @@ window.onload = function() {
       8: 8,
       9: 9,
       10: 10,
+      11: 11,
+      12: 12,
+      13: 13,
+      14: 14,
+      15: 15,
+      16: 16,
+      17: 17,
+      18: 18,
+      19: 19,
     }
   };
 
@@ -98,7 +167,7 @@ window.onload = function() {
   //This function adds HTML elements and content to the specified container (UL).
   function createListHTML(list, container) {
     container.innerHTML = ""; //first, clean up any existing LI elements
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 20; i++) {
       container.innerHTML = container.innerHTML + "<li data-index='" + list[i]["index"] + "'>" + "<span>" + list[i]["text"] + "</span>" + "</li>";
       //OR shorter version: container.innerHTML += "<li data-index='" + list[i]["index"] + "'>" + list[i]["text"] + "</li>";
     }
@@ -186,7 +255,7 @@ window.onload = function() {
     for (var i = 0; i < tryterms.length; i++) {
         saf = document.getElementsByClassName("score").length;
         console.log(saf);
-        if(saf == 20) {
+        if(saf == 40) {
           document.getElementsByClassName('set-2')[0].style.visibility = 'visible';
         }
      }
@@ -251,32 +320,26 @@ window.onload = function() {
 
 }
 
-
-// if(!window.parentPage)
-// {
-//     window.location.href = "https://kastilacientouno.vercel.app"
-// }
-
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
+// document.addEventListener('contextmenu', function(e) {
+//   e.preventDefault();
 
   
-});
+// });
 
-document.onkeydown = function(e) {
-  if(event.keyCode == 123) {
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-     return false;
-  }
-  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-     return false;
-  }
-}
+// document.onkeydown = function(e) {
+//   if(event.keyCode == 123) {
+//      return false;
+//   }
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+//      return false;
+//   }
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+//      return false;
+//   }
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+//      return false;
+//   }
+//   if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+//      return false;
+//   }
+// }

@@ -5,67 +5,67 @@ window.onload = function() {
   var data = {
     terms: [{
         index: 0,
-        text: "prever"
+        text: "poder"
       }, {
         index: 1,
-        text: "ansiedad"
+        text: "acerca de"
       }, {
         index: 2,
-        text: "alguna"
+        text: "encima"
       }, {
         index: 3,
-        text: "cualquiera"
+        text: "extranjero"
       }, {
         index: 4,
-        text: "nunca más"
+        text: "ausencia"
       }, {
         index: 5,
-        text: "nadie"
+        text: "realizar"
       }, {
         index: 6,
-        text: "cualquier cosa"
+        text: "conforme"
       }, {
         index: 7,
-        text: "de todas formas" 
+        text: "lograr"
       }, {
         index: 8,
-        text: "en cualquier sitio"
+        text: "logro"
       }, {
         index: 9,
-        text: "apelación"
+        text: "reconocer"
       }, 
 
     ],
     definitions: [{
         index: 0,
-        text: "anticipate"
+        text: "able"
       }, {
         index: 1,
-        text: "anxiety"
+        text: "about"
       }, {
         index: 2,
-        text: "any"
+        text: "above"
       }, {
         index: 3,
-        text: "anybody"
+        text: "abroad"
       }, {
         index: 4,
-        text: "anymore"
+        text: "absence"
       }, {
         index: 5,
-        text: "anyone"
+        text: "accomplish"
       }, {
         index: 6,
-        text: "anything"
+        text: "according"
       }, {
         index: 7,
-        text: "anyway"
+        text: "achieve"
       }, {
         index: 8,
-        text: "anywhere"
+        text: "achievement"
       }, {
         index: 9,
-        text: "appeal"
+        text: "acknowledge"
       }, 
 
     ],
@@ -167,7 +167,6 @@ window.onload = function() {
       //var def = document.querySelector("#defs [data-index='"+selectedDef+"']");
       var def = defsContainer.querySelector("[data-index='" + selectedDef + "']");
       if (isMatch(selectedTerm, selectedDef)) {
-
         term.className = "score";
         def.className = "score";
       }
@@ -180,7 +179,7 @@ window.onload = function() {
     }
   })
 
-  document.getElementsByClassName('set-4')[0].style.visibility = 'hidden';
+  document.getElementsByClassName('set-1')[0].style.visibility = 'hidden';
 
   function countPairs() {
     var tryterms = termsContainer.querySelectorAll("li");
@@ -188,7 +187,7 @@ window.onload = function() {
         saf = document.getElementsByClassName("score").length;
         console.log(saf);
         if(saf == 20) {
-          document.getElementsByClassName('set-4')[0].style.visibility = 'visible';
+          document.getElementsByClassName('set-1')[0].style.visibility = 'visible';
         }
      }
   }
@@ -251,6 +250,12 @@ window.onload = function() {
   });
 
 }
+
+
+// if(!window.parentPage)
+// {
+//     window.location.href = "https://kastilacientouno.vercel.app"
+// }
 
 document.addEventListener('contextmenu', function(e) {
   e.preventDefault();

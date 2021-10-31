@@ -159,11 +159,16 @@ ul {
 }
 
 ul#terms {
-  left: 200px;
+  left: 10px;
+  column-count: 4;
+  width: 421px;
+ 
 }
 
 ul#defs {
   left: 500px;
+  column-count: 4;
+  width: 421px;
 }
 
 ul#terms li {

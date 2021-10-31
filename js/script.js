@@ -63,7 +63,71 @@ window.onload = function() {
       }, {
         index: 19,
         text: "ofertas"
-      }, 
+      }, {
+        index: 20,
+        text: "vigencia"
+      }, {
+        index: 21,
+        text: "gestión"
+      }, {
+        index: 22,
+        text: "pendientes" 
+      }, {
+        index: 23,
+        text: "habilitación"
+      }, {
+        index: 24,
+        text: "prueba"
+      }, {
+        index: 25,
+        text: "cambio" 
+      }, {
+        index: 26,
+        text: "abiertas"
+      }, {
+        index: 27,
+        text: "otros"
+      }, {
+        index: 28,
+        text: "cobrará"
+      }, {
+        index: 29,
+        text: "atentamente"
+      }, {
+        index: 30,
+        text: "valor" 
+      }, {
+        index: 31,
+        text: "siguiente"
+      }, {
+        index: 32,
+        text: "descuento"
+      }, {
+        index: 33,
+        text: "pagos"
+      }, {
+        index: 34,
+        text: "otorgada"
+      }, {
+        index: 35,
+        text: "encuentra" 
+      }, {
+        index: 36,
+        text: "agradeciendo"
+      }, {
+        index: 37,
+        text: "antemano"
+      }, {
+        index: 38,
+        text: "promete" 
+      }, {
+        index: 39,
+        text: "revisada"
+      }
+      // }, {
+      //   index: 40,
+      //   text: "generen"
+      // }, 
 
     ],
     definitions: [{
@@ -126,7 +190,71 @@ window.onload = function() {
       }, {
         index: 19,
         text: "offers"
-      }, 
+      }, {
+        index: 20,
+        text: "validity"
+      }, {
+        index: 21,
+        text: "management"
+      }, {
+        index: 22,
+        text: "slopes"
+      }, {
+        index: 23,
+        text: "qualification"
+      }, {
+        index: 24,
+        text: "proof"
+      }, {
+        index: 25,
+        text: "change"
+      }, {
+        index: 26,
+        text: "open"
+      }, {
+        index: 27,
+        text: "others"
+      }, {
+        index: 28,
+        text: "bill to"
+      }, {
+        index: 29,
+        text: "sincerely"
+      }, {
+        index: 30,
+        text: "value"
+      }, {
+        index: 31,
+        text: "following"
+      }, {
+        index: 32,
+        text: "discount"
+      }, {
+        index: 33,
+        text: "payments"
+      }, {
+        index: 34,
+        text: "granted"
+      }, {
+        index: 35,
+        text: "find"
+      }, {
+        index: 36,
+        text: "thanking"
+      }, {
+        index: 37,
+        text: "beforehand"
+      }, {
+        index: 38,
+        text: "promises"
+      }, {
+        index: 39,
+        text: "reviewed"
+      }
+      // }, {
+      //   index: 40,
+      //   text: "generate"
+      // },  
 
     ],
     //this creates matches for indexes. This is a sort of an Answer Sheet
@@ -151,6 +279,27 @@ window.onload = function() {
       17: 17,
       18: 18,
       19: 19,
+      20: 20,
+      21: 21,
+      22: 22,
+      23: 23,
+      24: 24,
+      25: 25,
+      26: 26,
+      27: 27,
+      28: 28,
+      29: 29,
+      30: 30,
+      31: 31,
+      32: 32,
+      33: 33,
+      34: 34,
+      35: 35,
+      36: 36,
+      37: 37,
+      38: 38,
+      39: 39,
+      40:40
     }
   };
 
@@ -167,7 +316,7 @@ window.onload = function() {
   //This function adds HTML elements and content to the specified container (UL).
   function createListHTML(list, container) {
     container.innerHTML = ""; //first, clean up any existing LI elements
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < 40; i++) {
       container.innerHTML = container.innerHTML + "<li data-index='" + list[i]["index"] + "'>" + "<span>" + list[i]["text"] + "</span>" + "</li>";
       //OR shorter version: container.innerHTML += "<li data-index='" + list[i]["index"] + "'>" + list[i]["text"] + "</li>";
     }
@@ -255,7 +404,7 @@ window.onload = function() {
     for (var i = 0; i < tryterms.length; i++) {
         saf = document.getElementsByClassName("score").length;
         console.log(saf);
-        if(saf == 40) {
+        if(saf == 80) {
           document.getElementsByClassName('set-2')[0].style.visibility = 'visible';
         }
      }
@@ -320,26 +469,26 @@ window.onload = function() {
 
 }
 
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
+// document.addEventListener('contextmenu', function(e) {
+//   e.preventDefault();
 
   
-});
+// });
 
-document.onkeydown = function(e) {
-  if(event.keyCode == 123) {
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-     return false;
-  }
-  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-     return false;
-  }
-}
+// document.onkeydown = function(e) {
+//   if(event.keyCode == 123) {
+//      return false;
+//   }
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+//      return false;
+//   }
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+//      return false;
+//   }
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+//      return false;
+//   }
+//   if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+//      return false;
+//   }
+// }
